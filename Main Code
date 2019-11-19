@@ -1,0 +1,214 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+
+    time_t t;
+    srand((unsigned) time(&t));
+
+    char name1[50];
+    char name2[50];
+
+    int r = 0;
+    int wn = 0;
+    int n = rand() % (11);
+    float i;
+    char w;
+
+    printf("Welcome!\n");
+    sleep(1.5);
+    printf("\nPlease enter player 1's name!\n");
+    scanf("%s",name1);
+    sleep(1);
+    printf("\nPlease enter player 2's name!\n");
+    scanf("%s",name2);
+    sleep(1);
+
+    printf("\nLet's Play Numberwang!\n",name1);
+    sleep(1);
+    printf("\n%s to play first\n",name1);
+
+    for (r=0; r<=5; r++)
+    {
+        sleep(1);
+        printf("\n%s?\n",name1);
+        scanf("%f",&i);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=7)
+        {
+            printf("\nooooo\n");
+        }
+        if(n>=8)
+        {
+            printf("\a\a\nTHAT'S NUMBERWANG!\n");
+        }
+        sleep(1);
+        printf("\n%s?\n",name2);
+        scanf("%f",&i);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=7)
+        {
+            printf("\nooooo\n");
+        }
+        if(n>=8)
+        {
+            printf("\a\a\nTHAT'S NUMBERWANG!\n");
+        }
+    }
+
+    sleep(1);
+    printf("\nWell after that round %s is on %d, and %s is on %d\n",name1,rand() % 101,name2,rand() %101);
+
+    sleep(2);
+
+    printf("\nNow it's time to Wordwang\n",name2);
+    sleep(2);
+    printf("\nBut first, rotate the board!\n");
+    sleep(1);
+    printf("\n(Please rotate your screen. I need some audience participation)\n");
+    sleep(15);
+    printf("\n(Done it yet? Good.)\n");
+    sleep(4);
+    printf("\n%s to play first\n",name2);
+    sleep(1);
+
+    r=0;
+
+    for (wn=0; wn<=3; wn++)
+    {
+        sleep(1);
+        printf("\n%s?\n",name2);
+        scanf("%s",&w);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=7)
+        {
+            printf("\nooooo\n");
+        }
+        if(n>=8)
+        {
+            printf("\a\a\nTHAT'S WORDWANG!\n");
+        }
+
+        sleep(1);
+        printf("\n%s?\n",name1);
+        scanf("%s",&w);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=7)
+        {
+            printf("\nooooo\n");
+        }
+        if(n>=8)
+        {
+            printf("\a\a\nTHAT'S WORDWANG!\n");
+        }
+    }
+
+    sleep(1);
+    printf("\nWell after that round %s is on %c, and %s is on %c\n",name1,rand() % 126 + 33,name2,rand() %126 + 33);
+
+    sleep(3);
+
+    printf("\nWilkommen, wilkommen. Jetzt ist es Zeit für die deutsche Nümberwang-Runde.\nBratwurst parat, %s spielt zuerst:\n",name1);
+
+    r=0;
+
+    for (r=0; r<=4; r++)
+    {
+        sleep(1);
+        printf("\n%s?\n",name1);
+        scanf("%f",&i);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=2)
+        {
+            printf("\nNEIN, DAS IST NICHT NÜMBERWANG, DASS DU GEFÜLLT HAST\n");
+        }
+        if(n>=3)
+        {
+            printf("\a\a\nDAS IST NÜMBERWANG!\n");
+        }
+
+        sleep(1);
+        printf("\n%s?\n",name2);
+        scanf("%f",&i);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=2)
+        {
+            printf("\nNEIN, DAS IST NICHT NÜMBERWANG, DASS DU GEFÜLLT HAST\n");
+        }
+        if(n>=3)
+        {
+            printf("\a\a\nDAS IST NÜMBERWANG!\n");
+        }
+    }
+
+    sleep(1);
+    printf("\nGut nach dieser Runde ist %s bei %d Punkten und %s bei %d Punkten.\n\a",name1,rand() % 101,name2,rand() %101);
+
+    sleep(3);
+
+    printf("\a\a\a\a\nWell with that sound, it is time to play... WANGERNUMB!!\n");
+    sleep(2);
+    printf("\nA reminder that todays sponser is the number 12.\n");
+    sleep(2);
+    printf("\nGood luck to both contestants.\n");
+    sleep(1);
+    printf("\n%s to play first\n",name2);
+
+    r=0;
+
+    for (r=0; r<=7; r++)
+    {
+        sleep(1);
+        printf("\n%s?\n",name2);
+        scanf("%f",&i);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=8)
+        {
+            printf("\nooooo\n");
+        }
+        if(n>=9)
+        {
+            printf("\a\a\nAND THAT IS WANGERNUMB!\n");
+            sleep(2);
+            printf("\nThank you for playing! %s wins a holiday to Spain, and %s is going to get their organs harvested.\n",name2,name1);
+            sleep(2);
+            printf("\nAnd remember\n");
+            sleep(2);
+            printf("\nKEEEEEPPPP NUMBERWANG!\n");
+            return (0);
+        }
+        sleep(1);
+        printf("\n%s?\n",name1);
+        scanf("%f",&i);
+        sleep(1);
+        n = rand() % (11);
+        if(n<=8)
+        {
+            printf("\nooooo\n");
+        }
+        if(n>=9)
+        {
+            printf("\a\a\nAND THAT IS WANGERNUMB!");
+            sleep(2);
+            printf("\nAnd remember\n",name1,name2);
+            sleep(2);
+            printf("\nAnd remember\n");
+            sleep(2);
+            printf("\nKEEEEEPPPP NUMBERWANG!\n");
+            return (0);
+
+        }
+    }
+    printf("\a\nWell it's been 3 days since someone got Numberwang, so it is a draw! As always in the event of a draw, the Numbergas is released!\nTodays Numbergas is made from the letter 12, and mustard gas.\n\nThanks for playing!\nAnd remember\n",name1,name2);
+    sleep(3);
+    printf("\nKEEEEEPPPP NUMBERWANG!\n");
+    return (0);
+}
